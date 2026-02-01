@@ -1,0 +1,175 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cor (facilita manutenção) */
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #111827;
+    --bg-soft: #1f2933;
+    --primary: #3b82f6;
+    --text-main: #e5e7eb;
+    --text-soft: #9ca3af;
+    --border-soft: rgba(255, 255, 255, 0.08);
+}
+
+/* Corpo geral */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: linear-gradient(135deg, #020617, #020617, #020617);
+    border-bottom: 1px solid var(--border-soft);
+}
+
+header img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+header p {
+    color: var(--text-soft);
+    margin-top: 0.3rem;
+}
+
+/* main */
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Div da biografia */
+main > section:first-child {
+    flex: 3;
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-soft);
+}
+
+/* Div de redes sociais */
+main > aside:last-child {
+    flex: 1;
+    background-color: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-soft);
+    position: sticky;
+    top: 2rem;
+}
+
+main > aside ul {
+    list-style: none;
+}
+
+/* Títulos */
+section h2,
+section h3 {
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+
+/* Parágrafos */
+section p {
+    color: var(--text-soft);
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Listas */
+ul {
+    list-style: disc;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+ul li {
+    margin-bottom: 0.6rem;
+    color: var(--text-soft);
+}
+
+/* Links */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Redes sociais */
+main > aside:last-child ul li a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+main > aside:last-child ul li a:hover {
+    background-color: var(--bg-soft);
+}
+
+
+/* Footer */
+footer {
+    margin-top: 4rem;
+    padding: 2rem 1.5rem;
+    background-color: #020617;
+    border-top: 1px solid var(--border-soft);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+footer h4 {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    display: block;
+    margin-top: 0.3rem;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    section {
+        flex-direction: column;
+    }
+
+    section > div:last-child {
+        position: static;
+    }
+}
+
